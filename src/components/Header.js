@@ -54,7 +54,7 @@ export const Header = () => {
                 <MainHeader>
                     <Box className='container d-flex' sx={{ p: 1.5 }}>
                         <Box className='flex-item d-flex text-left'>
-                            <Avatar variant='rounded' sx={{ backgroundColor: color.primary, mr: 1.5 }}>
+                            <Avatar variant='rounded' sx={{ backgroundColor: color.primary, mr: 1.5, p:1 }}>
                                 <IconButton disableRipple>
                                     <DragHandleIcon />
                                 </IconButton>
