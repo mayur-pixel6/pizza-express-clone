@@ -3,6 +3,7 @@ import { appTheme} from './theme';
 import { ThemeProvider } from '@mui/material';
 import { Header } from './components/Header';
 import { HeroSlider } from './components/Slider';
+import { Catalogue } from './components/Catalogue';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="App">
         <Header />
         <HeroSlider />
+        <Catalogue />
       </div>
     </ThemeProvider>
   );
