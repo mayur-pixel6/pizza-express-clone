@@ -21,6 +21,8 @@ export const color = {
     textcolor: {
         primary: "#182135", //24, 33, 53
         secondary: "#4e483c", //#4e483c
+        tertiary: "#F0AA14",
+        grey: "#A3A3A4"
     },
     success: "#57a863",     //87, 168, 99
     failure: "#ec530a"      //#ec530a
@@ -40,6 +42,16 @@ const theme = {
         }
     },
     typography: {
+        h1: {
+            fontSize: '20px',
+            fontWeight: 700,
+            color: color.textcolor.primary    
+        },
+        h2: {
+            fontSize: '16px',
+            fontWeight: 700,
+            color: color.textcolor.primary 
+        },
         h3: {
             fontSize: '14px',
             fontWeight: 400,

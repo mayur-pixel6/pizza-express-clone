@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material';
 import { Header } from './components/Header';
 import { HeroSlider } from './components/Slider';
 import { Catalogue } from './components/Catalogue';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <HeroSlider />
         <Catalogue />
+        <Footer />
       </div>
     </ThemeProvider>
   );

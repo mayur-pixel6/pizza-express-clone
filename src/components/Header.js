@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import { AppBar, Avatar, Box, Button, IconButton, TextField, Typography } from '@mui/material'
+import { AppBar, Avatar, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControlLabel, IconButton, Radio, TextField, Typography } from '@mui/material'
 import { color } from '../theme'
 import AdbIcon from '@mui/icons-material/Adb';
 import AppleIcon from '@mui/icons-material/Apple';
@@ -30,6 +30,9 @@ const SearchWrapper = styled.div`
 `
 
 export const Header = () => {
+
+    const [open, setOpen] = useState(false)
+
     return (
         <Box sx={{ width: "100%"}}>
             <AppBar position='static'>
@@ -81,10 +84,26 @@ export const Header = () => {
                         </Box>
                         <Box className='flex-item d-flex text-right' sx={{ gap: '5%' }}>
                             <SortWrapper className='d-flex'>
-                                <Box className='d-flex' sx={{padding: 1.5}}>
+                                <Button variant='text' disableRipple sx={{padding: 1.5}} onClick={()=> setOpen(true)}>
                                     <Typography variant='h3' noWrap>Sort by</Typography>
                                     <UnfoldMoreOutlinedIcon sx={{ color: color.textcolor.primary }} />
-                                </Box>
+                                </Button>
+                                <Dialog open={open}
+                                onClose={() => setOpen(false)}>
+                                    <DialogTitle>
+                                        Sort by
+                                    </DialogTitle>
+                                    <DialogContent>
+                                        <DialogContentText>
+                                            <FormControlLabel value="Low To High" control={<Radio />} label="Price (Low To  High)"/>
+                                        </DialogContentText>
+                                    </DialogContent>
+                                    <DialogActions>
+
+                                        <Button variant='outlined'>Clear All</Button>
+                                        <Button variant='contained'>Apply</Button>
+                                    </DialogActions>
+                                </Dialog>
                                 <SearchWrapper>
                                     {/* <TextField variant='outlined' /> */}
                                     <Avatar variant='rounded'>
