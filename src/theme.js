@@ -18,6 +18,9 @@ export const color = {
     tertiary: {
         100: "#e2e4d8",     //226, 228, 216
     },
+    extra: {
+        white: "#F7F7F7" // 247,247,247x
+    },
     textcolor: {
         primary: "#182135", //24, 33, 53
         secondary: "#4e483c", //#4e483c
